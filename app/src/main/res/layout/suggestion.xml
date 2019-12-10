@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="#8000"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="生活建议"
+        android:textColor="#fff"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/air_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="空气质量:气象条件对空气污染物稀释,扩散和清除无明显影响，易感人群应适当减少室外活动时间"
+        android:textColor="#fff"/>
+    <TextView
+        android:id="@+id/comfort_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/car_wash_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/drsg_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="穿衣指数:建议着厚外套加毛衣等服装，年老体弱者宜着大衣，呢外套加羊毛衫。"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/flu_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="感冒指数:天凉，昼夜温差较大，较易发生感冒，请适当增减衣服，体质较弱的朋友请注意适当防护"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/sport_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/trav_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="旅游指数:天气较好，但丝毫不会影响您的出行的心情。温度适宜又有微风相伴，适宜旅游"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:id="@+id/uv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="紫外线指数:紫外线强度较弱，建议出门前涂擦,SPF在12-15之间,PA+的防晒护肤品"
+        android:textColor="#fff"/>
+
+
+</LinearLayout>

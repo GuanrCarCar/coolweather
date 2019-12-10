@@ -1,11 +1,14 @@
 package com.coolweather.android.util;
 
 import android.text.TextUtils;
+import android.util.Log;
 
+import com.coolweather.android.WeatherAcitvity;
 import com.coolweather.android.db.City;
 import com.coolweather.android.db.County;
 import com.coolweather.android.db.Province;
-import com.google.gson.JsonIOException;
+import com.coolweather.android.gson.Weather;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -13,15 +16,32 @@ import org.json.JSONObject;
 
 public class Utility {
 
+public static Weather handleWeatherResponse(String response){
+    try {
+        JSONObject jsonObject=new JSONObject(response);
+        JSONArray jsonArray=jsonObject.getJSONArray("HeWeather");
+        String weatherContent =jsonArray.getJSONObject(0).toString();
+        return new Gson().fromJson(weatherContent, Weather.class);
+    } catch (JSONException e) {
+        e.printStackTrace();
+    }
+
+    return null;
+}
+
     public static boolean handleProvinceResponse(String response) {
         if (!TextUtils.isEmpty(response)){
             try {
+
+                //将服务器返回的数据传入到JSONArray对象allProvinces中
                 JSONArray allProvinces =new JSONArray(response);
                 for (int i=0;i<allProvinces.length();i++){
-                    JSONObject provinceObj= allProvinces.getJSONObject(i);
+                    //循环遍历JSONAray
+                    //从中取出的每一个对象都是JSONObject对象
+                    JSONObject provinceObject= allProvinces.getJSONObject(i);
                     Province province=new Province();
-                    province.setProvinceName(provinceObj.getString("name"));
-                    province.setProvinceCode(provinceObj.getInt("id"));
+                    province.setProvinceName(provinceObject.getString("name"));
+                    province.setProvinceCode(provinceObject.getInt("id"));
                     province.save();
                 }
                 return true;
@@ -36,6 +56,7 @@ public class Utility {
 
     public static boolean handleCityResponse(String response,int provinceId){
         //解析eh和处理服务器返回的省级数据
+
         if (!TextUtils.isEmpty(response)){
             try {
                 JSONArray allCities=new JSONArray(response);
@@ -44,7 +65,8 @@ public class Utility {
                     City city=new City();
                     city.setCityName(cityObject.getString("name"));
                     city.setCityCode(cityObject.getInt("id"));
-                    city.setProvinceId(provinceId);
+                        city.setProvinceId(provinceId);
+                    city.save();
                 }
                 return true;
             }catch (JSONException e){
