@@ -15,10 +15,22 @@ public class Basic {
     @SerializedName("lon")
     public String cityLon;//城市的纬度
 
-    public Updata updata;
+    @SerializedName("tz")
+    public String tz;//11
 
-    public class Updata {
+    @SerializedName("location")
+    public String city;//11
+
+    @SerializedName("cid")
+    public String cityid;//11
+
+    @SerializedName("update")
+    public Updataa updataaa;
+
+    public class Updataa {
         @SerializedName("loc")
-        public String updatatime;//接口更新时间
+        public String updata;//接口更新时间
+        @SerializedName("utc")
+        public String updatax;//接口更新时间
     }
 }

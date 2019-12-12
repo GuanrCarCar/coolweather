@@ -278,8 +278,14 @@ runOnUiThread(new Runnable() {
         String cityName=weather.basic.cityName;
         Log.d("MainActivity","time12"+weather.basic.cityLat);
         Log.d("MainActivity","time21"+weather.basic.cityLon);
-//        String updataTime="更新时间:"+weather.updata.updatatime.split("")[1];
-        String updataTime="更新时间:8:00";
+        String updataTime="更新时间:"+weather.basic.updataaa.updata;
+        Log.d("MainActivity","time25"+weather.basic.tz);
+        Log.d("MainActivity","time22"+weather.basic.city);
+        Log.d("MainActivity","time23"+weather.basic.cityid);
+        Log.d("MainActivity","time24"+weather.basic.updataaa);
+
+//        String updataTime="更新时间:"+weather.basic.updata.split("")[1];
+//        String updataTime="更新时间:8:00";
         String lat="经度"+weather.basic.cityLat;
         String lon="纬度"+weather.basic.cityLon;
         titleCity.setText(cityName);

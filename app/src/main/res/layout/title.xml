@@ -3,27 +3,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="100dp">
+    android:layout_height="85dp">
 
     <Button
         android:id="@+id/nav_button"
-        android:layout_width="30dp"
+        android:layout_width="123dp"
         android:layout_height="30dp"
         android:layout_gravity="left|top"
-        app:layout_widthPercent="20%"
+        android:background="@mipmap/loge31"
         app:layout_heightPercent="80%"
-        android:background="@mipmap/icon13"/>
+        app:layout_widthPercent="25%" />
 
     <TextView
         android:id="@+id/title_city"
-        android:layout_width="wrap_content"
+        android:layout_width="219dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center|top"
         android:gravity="center"
-        app:layout_widthPercent="60%"
-        app:layout_heightPercent="80%"
         android:textColor="#fff"
-        android:textSize="40sp"/>
+        android:textSize="40sp"
+        app:layout_heightPercent="80%"
+        app:layout_widthPercent="60%" />
 
 
     <TextView

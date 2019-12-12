@@ -4,6 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class updata {
     @SerializedName("loc")
-    public String updatatime;//接口更新时间
+    public String updata;//接口更新时间
 
 }
